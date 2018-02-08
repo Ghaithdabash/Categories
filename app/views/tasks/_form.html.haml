@@ -1,0 +1,8 @@
+= simple_form_for(@task, html: {class: 'form-horizantal'}) do |f|
+  = f.collection_select :category_id, Category.all,:id, :name, {prompt: "Choose a Category"}
+  = f.input :title, label: "Task Title"
+  = f.input :description, label: "Task Description"
+  = f.input :company, label: "Company Name"
+  = f.input :url, label: "Link to the task"
+  %br
+  = f.button :submit

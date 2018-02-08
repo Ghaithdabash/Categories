@@ -1,0 +1,10 @@
+#jobs
+  .job
+    %h1= @task.title
+    %p= @task.description
+    %p= @task.company
+    %button.button.info= link_to "Complete task", @task.url
+
+#links
+  = link_to "Edit", edit_task_path(@task), class: "button info"
+  = link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you sure?" }, class: "button alert"
